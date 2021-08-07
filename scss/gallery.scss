@@ -1,0 +1,56 @@
+#gallery {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 208px;
+        width: 1296px;
+        .gallery-block-img {
+            .g-img {
+                width: 588px;
+                height: 412px;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover {
+                    background-size: 120% 120%;
+                }
+            }
+            span {
+                display: block;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+                color: #1A1A1A;
+                margin: 9px 0 32px 0;
+            }
+        }
+    }
+}
+
+.gallery-img1 {
+    background: url(../img/gallery/g1.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    margin-right: 24px;
+}
+
+.gallery-img2 {
+    background: url(../img/gallery/g2.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.gallery-img3 {
+    background: url(../img/gallery/g3.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    margin-right: 24px;
+}
+
+.gallery-img4 {
+    background: url(../img/gallery/g4.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}

@@ -1,0 +1,98 @@
+#footer {
+    margin-top: 79px;
+    padding: 97px 9.3% 73px 12.2%;
+    background: #2B2B2B;
+    box-shadow: 0px 400px 0px #2B2B2B;
+    display: flex;
+    position: relative;
+    img {
+        width: 87px;
+        height: 87px;
+    }
+    .footer-links-container {
+        margin-left: 4.8%;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 20.5%;
+        ul {
+            margin-right: 12%;
+            li {
+                color: white;
+                &:nth-child(1) {
+                    margin-bottom: 19px;
+                }
+                &:nth-child(2) {
+                    max-width: 125px;
+                }
+            }
+        }
+    }
+    .footer-socLink {
+        margin-right: 5.5%;
+        span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 17px;
+        }
+        div {
+            display: flex;
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 13px;
+                cursor: pointer;
+                transition: 0.5s;
+                &:nth-child(4) {
+                    margin-right: 0;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .footer-mail-list {
+        max-width: 369px;
+        span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 21px;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 17px;
+        }
+        p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+    }
+    .link-top {
+        position: absolute;
+        right: 22px;
+        bottom: 33px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        transform: rotate(-90deg);
+        display: block;
+    }
+}

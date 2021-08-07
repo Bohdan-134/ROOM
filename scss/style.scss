@@ -1,0 +1,41 @@
+@import "null.scss";
+@import "header.scss";
+@import "start-page.scss";
+@import "about.scss";
+@import "gallery.scss";
+@import "brands.scss";
+@import "sliderOne.scss";
+@import "products.scss";
+@import "review.scss";
+@import "text.scss";
+@import "about-us.scss";
+@import "free-trial.scss";
+@import "footer.scss";
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: #1A1A1A;
+}
+
+.h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #1A1A1A;
+}
+
+.text-s {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #AAAAAA;
+}
