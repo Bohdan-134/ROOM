@@ -1,20 +1,37 @@
 #about {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  .container {
+    margin-top: 82px;
     display: flex;
     justify-content: center;
-    .container {
-        margin-top: 82px;
-        display: flex;
-        justify-content: center;
-        h2 {
-            line-height: 58px;
-            width: 27.4%;
-            margin-right: 10.5%;
-        }
-        p {
-            font-size: 24px;
-            max-width: 569px;
-            line-height: 40px;
-        }
+    h2 {
+      line-height: 58px;
+      width: 27.4%;
+      margin-right: 10.5%;
     }
+    p {
+      font-size: 24px;
+      max-width: 569px;
+      line-height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #about {
+    .container {
+      margin-top: 5%;
+      flex-direction: column;
+      h2 {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 2% 0;
+      }
+      p {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
 }

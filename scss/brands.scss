@@ -26,3 +26,20 @@
         }
     }
 }
+
+@media screen and (max-width: 900px){
+    #brands{
+        margin-top: 10%;
+        p{
+            margin: 3% 0 8% 0;
+        }
+        .container {
+            .brands-img-block {
+                margin-bottom: 3%;
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

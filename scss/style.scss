@@ -11,6 +11,10 @@
 @import "about-us.scss";
 @import "free-trial.scss";
 @import "footer.scss";
+body{
+    position: relative;
+}
+
 .container {
     margin: 0 auto;
     max-width: 90%;
@@ -38,4 +42,10 @@
     font-weight: normal;
     font-size: 24px;
     color: #AAAAAA;
+}
+
+@media screen and (max-width : 900px){
+    .h2{
+        font-size: 40px;
+    }
 }

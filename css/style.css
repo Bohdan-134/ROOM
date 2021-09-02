@@ -101,7 +101,7 @@ h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 .header-contact-container span {
   font-family: Roboto;
@@ -111,7 +111,7 @@ h6 {
   line-height: 33px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #AAAAAA;
+  color: #aaaaaa;
 }
 .header-contact-container span:nth-child(2) {
   margin: 0 25px 0 25px;
@@ -144,8 +144,13 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
   position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header-container .bx-x {
+  display: none;
 }
 .header-container .container {
   width: 90%;
@@ -619,6 +624,65 @@ h6 {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .header-contact-container {
+    display: none;
+  }
+
+  .header-container {
+    position: fixed;
+    top: -200%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: #ffffffb5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .header-container .bx-x {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: black;
+    font-size: 25px;
+  }
+  .header-container .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-container .container nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 70% 0;
+  }
+  .header-container .container nav ul li {
+    margin: 20% 0;
+    font-size: 25px;
+  }
+  .header-container .cart-img {
+    top: 4%;
+    right: 4%;
+  }
+}
+.header-active {
+  top: 0%;
+}
+
 #start-page {
   padding-top: 48px;
 }
@@ -630,14 +694,39 @@ h6 {
   margin: auto;
 }
 
+@media screen and (max-width: 900px) {
+  #start-page {
+    height: 100vh !important;
+    height: calc(var(--vh, 1vh) * 100);
+    padding-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #start-page .start-page-bg {
+    margin: 0;
+    position: relative;
+  }
+  #start-page .start-page-bg .bx-menu {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
 #about {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 #about .container {
   margin-top: 82px;
@@ -659,6 +748,24 @@ h6 {
   line-height: 40px;
 }
 
+@media screen and (max-width: 900px) {
+  #about .container {
+    margin-top: 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .container h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 2% 0;
+  }
+  #about .container p {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 #gallery .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,6 +825,15 @@ h6 {
   background-position: 50% 50%;
 }
 
+@media screen and (max-width: 900px) {
+  #gallery .container {
+    margin-top: 9%;
+  }
+
+  .gallery-img1, .gallery-img3 {
+    margin-right: 0px;
+  }
+}
 #brands {
   margin-top: 212px;
 }
@@ -758,6 +874,20 @@ h6 {
           transform: scale(1.1);
 }
 
+@media screen and (max-width: 900px) {
+  #brands {
+    margin-top: 10%;
+  }
+  #brands p {
+    margin: 3% 0 8% 0;
+  }
+  #brands .container .brands-img-block {
+    margin-bottom: 3%;
+  }
+  #brands .container .brands-img-block img {
+    width: 80%;
+  }
+}
 #sliderOne {
   margin-top: 190px;
 }
@@ -1105,13 +1235,15 @@ h6 {
 
 #footer {
   margin-top: 79px;
-  padding: 97px 9.3% 73px 12.2%;
+  padding: 8% 6%;
   background: #2B2B2B;
   -webkit-box-shadow: 0px 400px 0px #2B2B2B;
           box-shadow: 0px 400px 0px #2B2B2B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
 }
 #footer img {
@@ -1119,13 +1251,9 @@ h6 {
   height: 87px;
 }
 #footer .footer-links-container {
-  margin-left: 4.8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 20.5%;
 }
 #footer .footer-links-container ul {
   margin-right: 12%;
@@ -1138,9 +1266,6 @@ h6 {
 }
 #footer .footer-links-container ul li:nth-child(2) {
   max-width: 125px;
-}
-#footer .footer-socLink {
-  margin-right: 5.5%;
 }
 #footer .footer-socLink span {
   font-family: Roboto;
@@ -1173,44 +1298,9 @@ h6 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-#footer .footer-mail-list {
-  max-width: 369px;
-}
-#footer .footer-mail-list span {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 21px;
-  letter-spacing: 0.5px;
-  color: #FFFFFF;
-  display: block;
-  margin-bottom: 17px;
-}
-#footer .footer-mail-list p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #FFFFFF;
-  margin-bottom: 30px;
-}
-#footer .link-top {
-  position: absolute;
-  right: 22px;
-  bottom: 33px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  letter-spacing: 2.4px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  display: block;
+
+body {
+  position: relative;
 }
 
 .container {
@@ -1240,4 +1330,10 @@ h6 {
   font-weight: normal;
   font-size: 24px;
   color: #AAAAAA;
+}
+
+@media screen and (max-width: 900px) {
+  .h2 {
+    font-size: 40px;
+  }
 }

@@ -2,73 +2,95 @@
 const logo = document.querySelector(".logo");
 const letter = document.querySelectorAll(".logo-img-letter");
 
-logo.onmouseenter = function() {
-    letter[0].classList.remove("letter1-a1");
-    letter[0].classList.add("letter1-a");
-    letter[1].classList.remove("letter2-a1");
-    letter[1].classList.add("letter2-a");
-    letter[2].classList.remove("letter3-a1");
-    letter[2].classList.add("letter3-a");
-    letter[3].classList.remove("letter4-a1");
-    letter[3].classList.add("letter4-a");
-}
+logo.onmouseenter = function () {
+  letter[0].classList.remove("letter1-a1");
+  letter[0].classList.add("letter1-a");
+  letter[1].classList.remove("letter2-a1");
+  letter[1].classList.add("letter2-a");
+  letter[2].classList.remove("letter3-a1");
+  letter[2].classList.add("letter3-a");
+  letter[3].classList.remove("letter4-a1");
+  letter[3].classList.add("letter4-a");
+};
 
-logo.onmouseleave = function() {
-    letter[0].classList.remove("letter1-a");
-    letter[0].classList.add("letter1-a1");
-    letter[1].classList.remove("letter2-a");
-    letter[1].classList.add("letter2-a1");
-    letter[2].classList.remove("letter3-a");
-    letter[2].classList.add("letter3-a1");
-    letter[3].classList.remove("letter4-a");
-    letter[3].classList.add("letter4-a1");
-}
+logo.onmouseleave = function () {
+  letter[0].classList.remove("letter1-a");
+  letter[0].classList.add("letter1-a1");
+  letter[1].classList.remove("letter2-a");
+  letter[1].classList.add("letter2-a1");
+  letter[2].classList.remove("letter3-a");
+  letter[2].classList.add("letter3-a1");
+  letter[3].classList.remove("letter4-a");
+  letter[3].classList.add("letter4-a1");
+};
 
 /* animation-map */
 
 const map = document.querySelector(".map");
 const mapImg = document.querySelector(".map-img");
 
-map.onmouseenter = function() {
-    mapImg.classList.add("map-img-animation");
-}
+map.onmouseenter = function () {
+  mapImg.classList.add("map-img-animation");
+};
 
-map.onmouseleave = function() {
-    mapImg.classList.remove("map-img-animation");
-}
+map.onmouseleave = function () {
+  mapImg.classList.remove("map-img-animation");
+};
 
 /* slick-slider */
 
 $(".slider").slick({
-    dots: true,
+  dots: true,
 });
 
 $(".sliderTwo").slick({
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 1500,
+  dots: false,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 1500,
 });
-
 
 /* AOS */
 
 AOS.init({
-    disable: false,
-    startEvent: 'DOMContentLoaded',
-    initClassName: 'aos-init',
-    animatedClassName: 'aos-animate',
-    useClassNames: false,
-    disableMutationObserver: false,
-    debounceDelay: 50,
-    throttleDelay: 99,
+  disable: false,
+  startEvent: "DOMContentLoaded",
+  initClassName: "aos-init",
+  animatedClassName: "aos-animate",
+  useClassNames: false,
+  disableMutationObserver: false,
+  debounceDelay: 50,
+  throttleDelay: 99,
 
-
-    offset: 160,
-    delay: 0,
-    duration: 800,
-    easing: 'ease',
-    once: false,
-    mirror: false,
-    anchorPlacement: 'top-bottom',
+  offset: 160,
+  delay: 0,
+  duration: 800,
+  easing: "ease",
+  once: false,
+  mirror: false,
+  anchorPlacement: "top-bottom",
 });
+
+/* Window */
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+window.addEventListener("resize", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
+/* burger */
+
+const openMenu = document.querySelector(".bx-menu");
+const closedMenu = document.querySelector(".bx-x");
+const headerContainer = document.querySelector(".header-container");
+
+openMenu.onclick = () => {
+    headerContainer.classList.add('header-active');
+}
+
+closedMenu.onclick = () => {
+    headerContainer.classList.remove('header-active');
+}

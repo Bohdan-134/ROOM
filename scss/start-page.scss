@@ -1,10 +1,33 @@
 #start-page {
-    padding-top: 48px;
+  padding-top: 48px;
+  .start-page-bg {
+    background: url(../img/start-page/start-page-bg.png);
+    background-size: 100% 100%;
+    width: 92.3%;
+    height: 746px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #start-page {
+    height: 100vh !important;
+    height: calc(var(--vh, 1vh) * 100);
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .start-page-bg {
-        background: url(../img/start-page/start-page-bg.png);
-        background-size: 100% 100%;
-        width: 92.3%;
-        height: 746px;
-        margin: auto;
+      margin: 0;
+      position: relative;
+      .bx-menu {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+      }
     }
+  }
 }
