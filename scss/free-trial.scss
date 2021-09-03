@@ -62,3 +62,22 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    #free-trial{
+        margin: 10% auto;
+    padding: 6% 0 3%;
+    .container {
+        span {
+            font-size: 40px;
+        }
+        .free-trial-content{
+            width: 70%;
+            margin: 8% auto 0;
+        }
+        button {
+            margin: 8% 0 4%;
+        }
+    }
+    }
+}

@@ -1,5 +1,5 @@
 #sliderOne {
-    margin-top: 190px;
+    margin-top: 120px;
     .slider {
         position: relative;
         .slider__item {
@@ -50,71 +50,24 @@
     }
 }
 
-
-/* Слайдер */
-
-.slick-slider {}
-
-
-/* Слайдер запущен */
-
-.slick-slider.slick-initialized {}
-
-
-/* Слайдер с точками */
-
-.slick-slider.slick-dotted {}
-
-
-/* Ограничивающая оболочка */
-
 .slick-list {
     overflow: hidden;
     padding: 0px 48px;
 }
 
-
-/* Лента слайдов */
-
 .slick-track {
     display: flex;
 }
 
-
-/* Слайд */
-
-.slick-slide {}
-
-
-/* Слайд активный (показывается) */
-
-.slick-slide.slick-active {}
-
-
-/* Слайд основной */
-
-.slick-slide.slick-current {}
-
-
-/* Слайд по центру */
-
-.slick-slide.slick-center {}
-
-
-/* Клонированный слайд */
-
-.slick-slide.slick-cloned {}
-
-
-/* Стрелка */
-
-
-/* Стрелка не активная */
-
-.slick-arrow.slick-disabled {}
-
-
-/* Точки (булиты) */
-
-
-/* Элемент точки */
+@media screen and (max-width: 1024px) {
+    #sliderOne{
+        margin-top: 12%;
+        .slider {
+            .slider__item {
+                img {
+                    height: 500px;
+                }
+            }
+        }
+    }
+}

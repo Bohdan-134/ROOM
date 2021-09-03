@@ -5,6 +5,7 @@
 @import "gallery.scss";
 @import "brands.scss";
 @import "sliderOne.scss";
+@import "slide-two.scss";
 @import "products.scss";
 @import "review.scss";
 @import "text.scss";
@@ -44,7 +45,7 @@ body{
     color: #AAAAAA;
 }
 
-@media screen and (max-width : 900px){
+@media screen and (max-width : 1024px){
     .h2{
         font-size: 40px;
     }

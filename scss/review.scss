@@ -43,3 +43,35 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    #review{
+        margin-top: 10%;
+        .review-bg {
+            height: 600px;
+            padding: 8% 6%;
+            .container{
+                margin: 0;
+                .review-block {
+                    margin-bottom: 4%;
+                    div{
+                        img {
+                            width: 3%;
+                        }
+                    }
+                    p{
+                        max-width: 40%;
+                        line-height: 25px;
+                        font-size: 20px;
+                    }
+                    img {
+                        width:15%;
+                    }
+                }
+                span {
+                    margin-top: 2%;
+                }
+            }
+        }
+    }
+}

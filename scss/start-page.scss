@@ -9,7 +9,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   #start-page {
     height: 100vh !important;
     height: calc(var(--vh, 1vh) * 100);
@@ -20,6 +20,7 @@
     .start-page-bg {
       margin: 0;
       position: relative;
+      height: 90%;
       .bx-menu {
         position: absolute;
         top: 2%;
